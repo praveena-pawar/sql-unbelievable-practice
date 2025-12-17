@@ -33,7 +33,6 @@ GROUP BY o.order_id;
 
 
 
-
 -- LEVEL 1 – QUESTION 4 (next basic)
 -- 	Find the total amount spent by each customer.
 SELECT c.customer_id, c.customer_name, SUM(quantity * price) AS total_spent
