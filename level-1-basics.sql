@@ -17,3 +17,15 @@ FROM customers c
 LEFT JOIN orders o
     ON c.customer_id = o.customer_id
 GROUP BY c.customer_name, c.customer_id;
+
+
+
+-- LEVEL 1 – QUESTION 3 (next basic)
+-- Find the total revenue generated for each order.
+SELECT o.order_id, SUM(quantity * price) AS total_revenue
+FROM orders o
+INNER JOIN order_items i
+    ON o.order_id = i.order_id
+INNER JOIN products p
+	ON p.product_id = i.product_id 
+GROUP BY o.order_id;
