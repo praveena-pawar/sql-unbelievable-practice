@@ -29,3 +29,19 @@ INNER JOIN order_items i
 INNER JOIN products p
 	ON p.product_id = i.product_id 
 GROUP BY o.order_id;
+
+
+
+
+
+-- LEVEL 1 – QUESTION 4 (next basic)
+-- 	Find the total amount spent by each customer.
+SELECT c.customer_id, c.customer_name, SUM(quantity * price) AS total_spent
+FROM customers c 
+INNER JOIN orders o 
+	ON c.customer_id = o.customer_id 
+INNER JOIN order_items i
+    ON i.order_id = o.order_id
+INNER JOIN products p 
+    ON p.product_id  = i.product_id 
+GROUP BY   c.customer_id, c.customer_name;
