@@ -10,3 +10,19 @@ INNER JOIN order_items i
 INNER JOIN products p 
     ON p.product_id  = i.product_id 
 GROUP BY   c.customer_id, c.customer_name;
+
+
+
+-- LEVEL 2 – QUESTION 2
+-- Find customers who have placed more than 2 orders.
+SELECT 
+	c.customer_id, 
+    c.customer_name, 
+    COUNT(o.order_id) AS total_orders
+FROM customers c 
+INNER JOIN orders o 
+    ON c.customer_id = o.customer_id
+GROUP BY 
+	c.customer_id, 
+    c.customer_name
+HAVING COUNT(o.order_id) > 2;
