@@ -43,3 +43,16 @@ INNER JOIN order_items i
 INNER JOIN products p 
     ON p.product_id  = i.product_id 
 GROUP BY   c.customer_id, c.customer_name;
+
+
+
+-- LEVEL 1 – QUESTION 5 (next basic)
+-- Find the number of distinct products purchased by each customer.
+SELECT 
+     c.customer_name, c.customer_id, COUNT(DISTINCT i.product_id) AS distinct_products_purchased
+FROM customers c
+INNER JOIN orders o
+    ON c.customer_id = o.customer_id
+INNER JOIN order_items i
+    ON i.order_id = o.order_id
+GROUP BY   c.customer_name, c.customer_id;
