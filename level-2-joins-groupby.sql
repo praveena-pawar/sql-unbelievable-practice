@@ -45,3 +45,38 @@ INNER JOIN products p
 GROUP BY 
     c.customer_id, 
     c.customer_name;
+
+
+
+-- Most expensive product purchased by each customer (using subquery)
+SELECT 
+    c.customer_id,
+    c.customer_name,
+    p.product_name,
+    p.price
+FROM customers c
+INNER JOIN orders o
+    ON c.customer_id = o.customer_id
+INNER JOIN order_items i
+    ON i.order_id = o.order_id
+INNER JOIN products p
+    ON p.product_id = i.product_id
+INNER JOIN (
+    SELECT 
+        c.customer_id,
+        MAX(p.price) AS max_price
+    FROM customers c
+    INNER JOIN orders o
+        ON c.customer_id = o.customer_id
+    INNER JOIN order_items i
+        ON i.order_id = o.order_id
+    INNER JOIN products p
+        ON p.product_id = i.product_id
+    GROUP BY c.customer_id
+) mp
+    ON mp.customer_id = c.customer_id
+   AND mp.max_price = p.price;
+
+
+
+
