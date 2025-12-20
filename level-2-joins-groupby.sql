@@ -78,5 +78,3 @@ INNER JOIN (
     ON mp.customer_id = c.customer_id
    AND mp.max_price = p.price;
 
-
-
