@@ -48,6 +48,7 @@ GROUP BY
 
 
 
+--NOTE : “Because a customer may have purchased multiple products, SQL cannot safely choose one product_name.” That's why we used the subquery 
 -- Most expensive product purchased by each customer (using subquery)
 SELECT 
     c.customer_id,
