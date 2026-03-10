@@ -8,3 +8,7 @@ WHERE salary > (
     FROM employees e2
     WHERE e1.department = e2.department
 );
+
+
+-- Query 2 :
+-- Find employees who earn the highest salary in their department.
