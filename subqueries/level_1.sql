@@ -18,3 +18,14 @@ WHERE salary = (SELECT MAX(salary)
 	FROM employees e2
     WHERE e1.department = e2.department
 );
+
+
+--Query 3 :
+-- Find departments where the average salary is greater than the company's overall average salary.
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > (
+    SELECT AVG(salary)
+    FROM employees
+);
