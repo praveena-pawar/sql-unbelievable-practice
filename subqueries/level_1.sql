@@ -12,3 +12,9 @@ WHERE salary > (
 
 -- Query 2 :
 -- Find employees who earn the highest salary in their department.
+SELECT name, department, salary
+FROM employees e1
+WHERE salary = (SELECT MAX(salary)
+	FROM employees e2
+    WHERE e1.department = e2.department
+);
