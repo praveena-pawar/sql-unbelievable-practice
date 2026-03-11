@@ -34,5 +34,16 @@ WHERE salary = (
 
 
 
--- Query 2 :
+-- Query 3 :
 -- Find departments where the total salary is greater than the company's average department salary.
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department
+HAVING SUM(salary) > (
+    SELECT AVG(dept_total)
+    FROM (
+        SELECT SUM(salary) AS dept_total
+        FROM employees
+        GROUP BY department
+    ) AS t
+);
