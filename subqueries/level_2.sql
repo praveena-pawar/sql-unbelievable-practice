@@ -10,4 +10,11 @@ WHERE salary > (SELECT AVG(salary)
 
 
 -- Query 2 :
--- Find employees who earn the second highest salary in the com
+-- Find employees who earn the second highest salary in the company.
+SELECT name, salary
+FROM employees
+WHERE salary = (SELECT DISTINCT salary
+	FROM employees
+    ORDER BY salary DESC
+    LIMIT 1 OFFSET 1
+);
