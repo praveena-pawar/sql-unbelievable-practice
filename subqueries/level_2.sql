@@ -1,0 +1,2 @@
+-- Query 1 :
+-- Find the names of employees whose salary is greater than the company's average salary.
