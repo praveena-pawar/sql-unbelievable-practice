@@ -30,3 +30,9 @@ WHERE salary = (
         FROM employees
     )
 );
+
+
+
+
+-- Query 2 :
+-- Find departments where the total salary is greater than the company's average department salary.
