@@ -18,3 +18,15 @@ WHERE salary = (SELECT DISTINCT salary
     ORDER BY salary DESC
     LIMIT 1 OFFSET 1
 );
+
+-- One more way to write the query for same question 2
+SELECT name, salary
+FROM employees
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM employees
+    WHERE salary < (
+        SELECT MAX(salary)
+        FROM employees
+    )
+);
