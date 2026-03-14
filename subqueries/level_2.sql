@@ -83,3 +83,9 @@ AND salary > (
     FROM employees
     WHERE department = "HR"
 );
+
+
+
+
+-- Query 7 : 
+-- Find the employees who work in the same department as 'Alice'.
