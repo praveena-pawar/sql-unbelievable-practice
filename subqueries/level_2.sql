@@ -69,3 +69,9 @@ WHERE salary > (SELECT AVG(salary)
 	FROM employees
     WHERE department = "HR"
 );
+
+
+
+
+-- Query 6 : 
+-- Find HR employees who earn more than the average salary of HR.
