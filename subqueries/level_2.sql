@@ -63,3 +63,9 @@ WHERE salary = (SELECT MIN(salary)
 
 -- Query 5 :
 -- Find the employees who earn more than the average salary of the HR department.
+SELECT name, salary 
+FROM employees
+WHERE salary > (SELECT AVG(salary)
+	FROM employees
+    WHERE department = "HR"
+);
