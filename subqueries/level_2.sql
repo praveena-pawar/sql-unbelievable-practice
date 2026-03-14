@@ -53,3 +53,8 @@ HAVING SUM(salary) > (
 
 -- Query 4 :
 -- Find the employees who earn the minimum salary in the company.
+SELECT name, salary
+FROM employees
+WHERE salary = (SELECT MIN(salary)
+	FROM employees
+);
