@@ -89,3 +89,9 @@ AND salary > (
 
 -- Query 7 : 
 -- Find the employees who work in the same department as 'Alice'.
+SELECT name, department 
+FROM employees
+WHERE department = (SELECT department 
+	FROM employees
+    WHERE name = "Alice"
+);
