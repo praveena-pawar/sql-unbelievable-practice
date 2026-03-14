@@ -47,3 +47,9 @@ HAVING SUM(salary) > (
         GROUP BY department
     ) AS t
 );
+
+
+
+
+-- Query 4 :
+-- Find the employees who earn the minimum salary in the company.
