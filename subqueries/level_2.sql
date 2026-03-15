@@ -113,3 +113,9 @@ WHERE salary > (SELECT salary
 
 --Query 8 :
 -- Find the employees who earn the same salary as Bob using a subquery.
+SELECT name, salary
+FROM employees
+WHERE salary = (SELECT salary 
+	FROM employees
+    WHERE name = "Bob"
+);
