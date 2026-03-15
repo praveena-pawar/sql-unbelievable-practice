@@ -137,3 +137,9 @@ WHERE age > (SELECT AVG(age)
 
 --Query 10 :
 -- Find the employees who work in the same department as Bob using a subquery.
+SELECT name, department
+FROM employees
+WHERE department = (SELECT department
+	FROM employees
+    WHERE name = "Bob"
+);
