@@ -119,3 +119,9 @@ WHERE salary = (SELECT salary
 	FROM employees
     WHERE name = "Bob"
 );
+
+
+
+
+--Query 9 :
+-- Find the employees who are older than the average age of the company.
