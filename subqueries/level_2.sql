@@ -130,3 +130,10 @@ FROM employees
 WHERE age > (SELECT AVG(age) 
 	 FROM employees
 );
+
+
+
+
+
+--Query 10 :
+-- Find the employees who work in the same department as Bob using a subquery.
