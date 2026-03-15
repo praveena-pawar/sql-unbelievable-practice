@@ -125,3 +125,8 @@ WHERE salary = (SELECT salary
 
 --Query 9 :
 -- Find the employees who are older than the average age of the company.
+SELECT name, age
+FROM employees
+WHERE age > (SELECT AVG(age) 
+	 FROM employees
+);
