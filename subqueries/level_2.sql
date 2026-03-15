@@ -107,3 +107,9 @@ WHERE salary > (SELECT salary
 	FROM employees
     WHERE name = "Alice"
 );
+
+
+
+
+--Query 8 :
+-- Find the employees who earn the same salary as Bob using a subquery.
