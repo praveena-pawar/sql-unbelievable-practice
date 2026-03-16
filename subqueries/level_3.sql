@@ -22,3 +22,9 @@ WHERE salary = (SELECT MAX(salary)
 
 -- Query 3:
 -- Find the employees who have the lowest salary in their department.
+SELECT name, department, salary 
+FROM employees e1
+WHERE salary = (SELECT MIN(salary)
+	FROM employees e2
+    WHERE e1.department = e2.department
+);
