@@ -46,3 +46,10 @@ WHERE age > (SELECT AVG(age)
 
 -- Query 5:
 -- Find the employees whose salary is higher than at least one other employee in their department.
+SELECT name, department, salary
+FROM employees e1
+WHERE EXISTS (SELECT 1 
+	FROM employees e2
+    WHERE e1.department = e2.department
+    AND e2.salary > e1.salary
+);
