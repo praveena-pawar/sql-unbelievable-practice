@@ -28,3 +28,9 @@ WHERE salary = (SELECT MIN(salary)
 	FROM employees e2
     WHERE e1.department = e2.department
 );
+
+
+
+
+-- Query 4 :
+-- Find employees whose age is greater than the average age of their department.
