@@ -53,3 +53,9 @@ WHERE EXISTS (SELECT 1
     WHERE e1.department = e2.department
     AND e2.salary > e1.salary
 );
+
+
+
+
+-- Query 6:
+-- Find employees who earn more than every other employee in their department.
