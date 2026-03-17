@@ -1,0 +1,2 @@
+-- Query 1 :
+-- Find the employees who work in departments that have at least one employee earning more than 90000.
