@@ -67,3 +67,8 @@ WHERE NOT EXISTS (
     WHERE e1.department = e2.department
     AND e2.salary > e1.salary
 );
+
+
+
+-- Query 7:
+-- Find employees who earn less than every other employee in their department
