@@ -12,3 +12,9 @@ WHERE department IN (SELECT department
 
 -- Query 2 :
 -- Find employees who work in departments that have at least one employee older than 35.
+SELECT name, department, age
+FROM employees 
+WHERE department IN (SELECT department
+	FROM employees 	
+    WHERE age > 35
+);
