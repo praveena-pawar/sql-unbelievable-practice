@@ -49,3 +49,10 @@ WHERE salary > ANY (
 
 -- Query 5 : 
 -- WHEN question says only HR then we use
+SELECT name, department, salary 
+FROM employees 
+WHERE department = "HR"
+AND salary > ANY (SELECT salary
+	FROM employees 
+    WHERE department = "Hr"
+);
