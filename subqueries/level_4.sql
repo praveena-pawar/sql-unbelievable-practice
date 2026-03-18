@@ -43,3 +43,9 @@ WHERE salary > ANY (
     FROM employees 
     WHERE department = 'HR'
 );
+
+
+
+
+-- Query 5 : 
+-- WHEN question says only HR then we use
