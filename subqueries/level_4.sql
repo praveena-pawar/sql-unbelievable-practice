@@ -30,3 +30,9 @@ WHERE department NOT IN (SELECT department
 	FROM employees 
     WHERE salary > 90000
 );
+
+
+
+
+-- Query 4 :
+-- Find employees whose salary is greater than ANY salary in the HR department.
