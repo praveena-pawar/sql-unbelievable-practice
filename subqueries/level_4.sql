@@ -74,3 +74,9 @@ WHERE salary > ALL (SELECT salary
 
 -- Query 7 :
 -- Find employees whose salary is greater than ALL salaries in the Sales department.
+SELECT name, department, salary 
+FROM employees
+WHERE salary > ALL (SELECT salary
+	FROM employees 
+    WHERE department = "Sales"
+);
