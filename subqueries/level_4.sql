@@ -36,3 +36,10 @@ WHERE department NOT IN (SELECT department
 
 -- Query 4 :
 -- Find employees whose salary is greater than ANY salary in the HR department.
+SELECT name, department, salary 
+FROM employees 
+WHERE salary > ANY (
+    SELECT salary
+    FROM employees 
+    WHERE department = 'HR'
+);
