@@ -18,3 +18,9 @@ WHERE department IN (SELECT department
 	FROM employees 	
     WHERE age > 35
 );
+
+
+
+
+-- Query 3 :
+-- Find employees who work in departments where no employee earns more than 90000.
