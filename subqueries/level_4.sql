@@ -24,3 +24,9 @@ WHERE department IN (SELECT department
 
 -- Query 3 :
 -- Find employees who work in departments where no employee earns more than 90000.
+SELECT name, department, salary
+FROM employees
+WHERE department NOT IN (SELECT department
+	FROM employees 
+    WHERE salary > 90000
+);
