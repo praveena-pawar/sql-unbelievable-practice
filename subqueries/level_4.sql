@@ -56,3 +56,9 @@ AND salary > ANY (SELECT salary
 	FROM employees 
     WHERE department = "Hr"
 );
+
+
+
+
+-- Query 6 :
+-- Find employees whose salary is greater than ALL salaries in the HR department.
