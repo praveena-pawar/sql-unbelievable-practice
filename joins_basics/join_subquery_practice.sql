@@ -14,3 +14,12 @@ WHERE e.salary >
 
 -- Query2 : Get department name and average salary of that department
 -- Only include departments where average salary > overall average salary
+
+SELECT d.dept_name,
+       AVG(e.salary) AS avg_salary
+FROM employee e
+INNER JOIN department d ON e.dept_id = d.dept_id
+GROUP BY d.dept_name
+HAVING AVG(e.salary) >
+  (SELECT AVG(salary)
+   FROM employee);
