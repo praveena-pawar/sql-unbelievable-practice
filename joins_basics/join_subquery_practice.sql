@@ -23,3 +23,9 @@ GROUP BY d.dept_name
 HAVING AVG(e.salary) >
   (SELECT AVG(salary)
    FROM employee);
+
+
+
+
+-- Query3 : Get employee name and salary
+-- Only include employees who earn more than the average salary of their own department
