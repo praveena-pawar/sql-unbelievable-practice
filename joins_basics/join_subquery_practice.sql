@@ -37,3 +37,10 @@ WHERE e.salary >
     (SELECT AVG(salary)
      FROM employee e2
      WHERE e.dept_id = e2.dept_id);
+
+
+
+
+-- Query4 : Get department name and highest salary in each department
+-- Only include departments where highest salary > 60000
+
