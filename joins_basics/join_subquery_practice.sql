@@ -29,3 +29,11 @@ HAVING AVG(e.salary) >
 
 -- Query3 : Get employee name and salary
 -- Only include employees who earn more than the average salary of their own department
+
+SELECT e.name,
+       e.salary
+FROM employee e
+WHERE e.salary >
+    (SELECT AVG(salary)
+     FROM employee e2
+     WHERE e.dept_id = e2.dept_id);
