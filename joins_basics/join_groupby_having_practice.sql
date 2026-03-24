@@ -9,3 +9,9 @@ FROM customers c
 INNER JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY name
 HAVING AVG(o.amount) > 400;
+
+
+
+
+-- Query2 : List all customers who have made more than one order, along with the number of orders they have made. 
+-- Sort the results by the number of orders in descending order.
