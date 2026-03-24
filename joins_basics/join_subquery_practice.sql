@@ -44,3 +44,10 @@ WHERE e.salary >
 -- Query4 : Get department name and highest salary in each department
 -- Only include departments where highest salary > 60000
 
+SELECT d.dept_name,
+       MAX(e.salary) AS highest_salary
+FROM employee e
+INNER JOIN department d ON e.dept_id = d.dept_id
+GROUP BY d.dept_name
+HAVING MAX(e.salary) > 60000;
+
