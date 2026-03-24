@@ -1,6 +1,6 @@
 -- customer name
 -- total order amount
--- Condition: total > 800
+-- Condition: total > 400
 -- only customers who placed orders
 
 SELECT name,
