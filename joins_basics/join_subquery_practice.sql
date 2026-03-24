@@ -1,0 +1,2 @@
+-- Query1 : Get employee name, department name, salary
+-- Only include employees whose salary is greater than the average salary of all employees
