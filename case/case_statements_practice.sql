@@ -40,3 +40,12 @@ GROUP BY
         WHEN amount BETWEEN 500 AND 1000 THEN 'Medium'
         WHEN amount > 1000 THEN 'High'
     END;
+
+
+
+
+
+-- Show:
+-- total amount of Low orders
+-- total amount of Medium orders
+-- total amount of High orders
