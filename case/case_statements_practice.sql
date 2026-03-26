@@ -45,7 +45,14 @@ GROUP BY
 
 
 
+
 -- Show:
 -- total amount of Low orders
 -- total amount of Medium orders
 -- total amount of High orders
+
+SELECT
+    SUM(CASE WHEN amount < 500 THEN amount ELSE 0 END) AS low_total,
+    SUM(CASE WHEN amount BETWEEN 500 AND 1000 THEN amount ELSE 0 END) AS medium_total,
+    SUM(CASE WHEN amount > 1000 THEN amount ELSE 0 END) AS high_total
+FROM orders;
