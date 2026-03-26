@@ -15,3 +15,13 @@ SELECT order_id,
            WHEN amount > 1000 THEN "High"
        END AS category
 FROM orders;
+
+
+
+
+
+
+-- Count number of orders in each category:
+-- Low
+-- Medium
+-- High
