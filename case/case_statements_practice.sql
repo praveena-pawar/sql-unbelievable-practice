@@ -25,3 +25,18 @@ FROM orders;
 -- Low
 -- Medium
 -- High
+
+SELECT
+    CASE
+        WHEN amount < 500 THEN 'Low'
+        WHEN amount BETWEEN 500 AND 1000 THEN 'Medium'
+        WHEN amount > 1000 THEN 'High'
+    END AS category,
+    COUNT(*) AS total_orders
+FROM orders
+GROUP BY
+    CASE
+        WHEN amount < 500 THEN 'Low'
+        WHEN amount BETWEEN 500 AND 1000 THEN 'Medium'
+        WHEN amount > 1000 THEN 'High'
+    END;
