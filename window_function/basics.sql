@@ -22,3 +22,11 @@ SELECT
     salary,
     ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_numbers
 FROM employee;
+
+
+
+
+
+-- name
+-- salary
+-- maximum salary of all employees using window function
