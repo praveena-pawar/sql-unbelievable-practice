@@ -30,3 +30,6 @@ FROM employee;
 -- name
 -- salary
 -- maximum salary of all employees using window function
+SELECT name, salary,
+       MAX(salary) OVER() AS max_salary
+FROM employee;
