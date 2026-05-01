@@ -23,3 +23,4 @@ INSERT INTO departments (dept_id, dept_name) VALUES
 (102, 'IT'),
 (103, 'Finance');
 
+
