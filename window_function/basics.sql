@@ -33,3 +33,4 @@ FROM employee;
 SELECT name, salary,
        MAX(salary) OVER() AS max_salary
 FROM employee;
+
