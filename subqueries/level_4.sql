@@ -81,3 +81,4 @@ WHERE salary > ALL (SELECT salary
     WHERE department = "Sales"
 );
 
+
